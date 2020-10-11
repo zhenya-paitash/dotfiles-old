@@ -1,5 +1,5 @@
 "PLUGINS
-call plug#begin('~/vimfiles/plug')  			":PlugInstall
+call plug#begin('~/vimfiles/plugged')  			":PlugInstall
 
 Plug 'ryanoasis/vim-devicons'				"font icons (непашет)
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }  "Ctrl+N catalog
@@ -11,6 +11,7 @@ Plug 'tpope/vim-fugitive' 				"git plugin
 Plug 'airblade/vim-gitgutter' 				"git marks
 Plug 'easymotion/vim-easymotion'
 Plug 'ycm-core/YouCompleteMe'				"autocomplete
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -19,7 +20,7 @@ if (has("termguicolors"))
  set termguicolors
 endif
 
-
+let g:ycm_python_interpreter_path = '~\AppData\Local\Programs\Python\Python39\python.exe'
 let g:pymode_python = 'python3'
 "set pythondll=python3.dll
 "set pythonhome=C:\Users\zhenyapaitash\AppData\Local\Programs\Python\Python39
