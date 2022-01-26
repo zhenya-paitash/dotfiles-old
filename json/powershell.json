@@ -1,0 +1,43 @@
+{
+  "author": "Takuya Matsuyama",
+  "git": "https://github.com/craftzdog",
+  "repo": "dotfiles-public",
+  "youtube": "https://youtu.be/5-aK2_WwrmM",
+  "steps": {
+    "1": {
+      "title": "Install patched Nerd fonts (hack)",
+      "links": ["https://github.com/ryanoasis/nerd-fonts"],
+      "description": [
+        "Установить патченный шрифт 'Hack.zip' последнего стабильного релиза."
+      ]
+    },
+    "2": {
+      "title": "Configure Windows Terminal",
+      "links": [],
+      "description": [
+        "Установить Windows Terminal из Microsoft Store ",
+        "Открыть настройки Windows Terminal",
+        "Оформление => Показывать акрил в строке вкладки",
+        "По умолчанию => Оформление => Выбрать шрифт 'Hack NF'",
+        "Так же, чуть ниже выбрать 'Акриловый' для прозрачности (по желанию). 50%"
+      ]
+    },
+    "3": {
+      "title": "Install PowerShell",
+      "links": [],
+      "description": [
+        "Установить PowerShell из Microsoft Store",
+        "Выбрать профиль по умолчанию установленный PowerShell"
+      ]
+    },
+    "4": {
+      "title": "Change the terminal background color",
+      "links": [],
+      "description": [
+        "Настройки терминала (Ctrl + ,) => Открыть файл JSON",
+        "Добавить свою модифицированную схему",
+        "(Моя текущая тема находится \"repo/json/powershellSceme.json\")"
+      ]
+    }
+  }
+}
