@@ -23,15 +23,15 @@ Set-PSReadLineOption -PredictionSource History
 
 # FZF
 Import-Module PSFzf
-Set-PsFzfOption -SPReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+Set-PsFzfOption -SPReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r' 
 
 # Alias
 Set-Alias -Name vim -Value nvim
 Set-Alias ll ls
 Set-Alias g git
-Set-Alias grep findstr
-Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
-Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
+# Set-Alias grep findstr
+# Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
+# Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias e explorer
 
 # Utilities

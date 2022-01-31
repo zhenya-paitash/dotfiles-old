@@ -10,24 +10,25 @@
         {
           "type": "shell",
           "style": "diamond",
+          // "leading_diamond_default": "╭─",
           "leading_diamond": "╭─",
           "trailing_diamond": "",
           "foreground": "#F65151",
           "background": "#2E2828",
           "properties": {}
         },
-        {
-          "type": "root",
-          "style": "diamond",
-          "leading_diamond": "",
-          "trailing_diamond": "",
-          "foreground": "#f7e92b",
-          "background": "#F65151",
-          "properties": {
-            "root_icon": "\uf292",
-            "prefix": "<parentBackground>\uE0B0</> "
-          }
-        },
+//        {
+//          "type": "root",
+//          "style": "diamond",
+//          "leading_diamond": "",
+//          "trailing_diamond": "",
+//          "foreground": "#f7e92b",
+//          "background": "#F65151",
+//          "properties": {
+//            "root_icon": "\uf292",
+//            "prefix": "<parentBackground>\uE0B0</> "
+//          }
+//        },
         {
           "type": "path",
           "style": "powerline",
@@ -78,20 +79,20 @@
             "yarn_icon": " <#348cba></>",
             "npm_icon": " <#cc3a3a></> "
           }
-        },
-        {
-          "type": "time",
-          "style": "diamond",
-          "invert_powerline": true,
-          "leading_diamond": " \uE0B6",
-          "trailing_diamond": "\uE0B4",
-          "background": "#2E2828",
-          "foreground": "#707070",
-          "properties": {
-            "prefix": " \uf5ef ",
-            "postfix": " "
-          }
         }
+        // {
+        //   "type": "time",
+        //   "style": "diamond",
+        //   "invert_powerline": true,
+        //   "leading_diamond": " \uE0B6",
+        //   "trailing_diamond": "\uE0B4",
+        //   "background": "#2E2828",
+        //   "foreground": "#707070",
+        //   "properties": {
+        //     "prefix": " \uf5ef ",
+        //     "postfix": " "
+        //   }
+        // }
       ]
     },
     {
@@ -106,6 +107,7 @@
           "properties": {
             "prefix": "",
             "postfix": "",
+            // "text_default": "╰─",
             "text": "╰─"
           }
         },
