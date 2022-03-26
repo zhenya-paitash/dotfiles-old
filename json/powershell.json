@@ -1,0 +1,142 @@
+{
+  "author": "Takuya Matsuyama",
+  "git": "https://github.com/craftzdog",
+  "repo": "dotfiles-public",
+  "youtube": "https://youtu.be/5-aK2_WwrmM",
+  "steps": {
+    "1": {
+      "title": "Install patched Nerd fonts (hack)",
+      "links": ["https://github.com/ryanoasis/nerd-fonts"],
+      "description": [
+        "Установить патченный шрифт 'Hack.zip' последнего стабильного релиза."
+      ]
+    },
+    "2": {
+      "title": "Configure Windows Terminal",
+      "links": [],
+      "description": [
+        "Установить Windows Terminal из Microsoft Store ",
+        "Открыть настройки Windows Terminal",
+        "Оформление => Показывать акрил в строке вкладки",
+        "По умолчанию => Оформление => Выбрать шрифт 'Hack NF'",
+        "Так же, чуть ниже выбрать 'Акриловый' для прозрачности (по желанию). 50%"
+      ]
+    },
+    "3": {
+      "title": "Install PowerShell",
+      "links": [],
+      "description": [
+        "Установить PowerShell из Microsoft Store",
+        "Выбрать профиль по умолчанию установленный PowerShell"
+      ]
+    },
+    "4": {
+      "title": "Change the terminal background color",
+      "links": [],
+      "description": [
+        "Настройки терминала (Ctrl + ,) => Открыть файл JSON",
+        "Добавить свою модифицированную схему",
+        "(Моя текущая тема находится \"repo/json/powershellScheme.json\")",
+        "Выбрать в настройках терминала новую тему"
+      ]
+    },
+    "5": {
+      "title": "Install Scoop",
+      "links": [
+        "https://scoop.sh/",
+        "https://curl.se/",
+        "https://www.sudo.ws/",
+        "https://stedolan.github.io/jq/"
+      ],
+      "description": [
+        "Установить Scoop через PowerShell:",
+        "iwr -useb get.scoop.sh | iex",
+        "Через scoop установить следующие расширения:",
+        "cURL — кроссплатформенная служебная программа командной строки, позволяющая взаимодействовать с множеством различных серверов по множеству различных протоколов с синтаксисом URL",
+        "sudo — программа для системного администрирования UNIX-систем, позволяющая делегировать те или иные привилегированные ресурсы пользователям с ведением протокола работы. Основная идея — дать пользователям как можно меньше прав, при этом достаточных для решения поставленных задач",
+        "jq — это легкий и гибкий процессор JSON для командной строки",
+        "",
+        "scoop install curl sudo jq",
+        "Для проверки можно использовать команду:",
+        "curl 'https://api.inkdrop.app/' | jq ."
+      ]
+    },
+    "6": {
+      "title": "Install Git for Windows",
+      "links": [
+        "https://gitforwindows.org/",
+        "https://git-scm.com/download/win"
+      ],
+      "description": [
+        "Установить Git для Windows либо вручную, либо через командную строку, командой: ",
+        "winget install -e --id Git.Git"
+      ]
+    },
+    "7": {
+      "title": "Install Neovim",
+      "links": ["https://neovim.io/"],
+      "description": [
+        "Установить Neovim:",
+        "scoop install neovim gcc",
+        "Проверить: nvim"
+      ]
+    },
+    "8": {
+      "title": "Make a user profile & set command aliases",
+      "links": [],
+      "description": [
+        "Создать файл с настройками powershell в $env:",
+        "nvim .config\\powershell\\user_profile.ps1",
+        "*Мой текущий конфиг можно увидеть в ветке \"main\"",
+        "После этого следует задать этот файл как конфигурацию powershell:",
+        "nvim $PROFILE.CurrentUserCurrentHost",
+        "*в случае ошибок доступа, файл находится примерно: C:\\Users\\zhenyapaitash\\Documents\\PowerShell\\Microsoft.PowerShell_profile.ps1",
+        "Проверить работоспособность конфига в новой сессии powershell",
+        "ll | less"
+      ]
+    },
+    "9": {
+      "title": "Install Oh My Posh",
+      "links": ["https://ohmyposh.dev/", "https://ohmyposh.dev/docs/themes"],
+      "description": [
+        "Установить posh-git и oh-my-posh в директорию $env\\.config\\powershell:",
+        "Install-Module posh-git -Scope CurrentUser -Force",
+        "Install-Module oh-my-posh -Scope CurrentUser -Force",
+        "Импортировать модули в config файл user_profile.ps1",
+        "Задать тему панели oh-my-posh",
+        "Открать новую сессию для подгрузки конфига и темы"
+      ]
+    },
+    "10": {
+      "title": "Customize prompt",
+      "links": [],
+      "description": [
+        "Создать файл конфигурации $env\\.config\\powershell\\takuya.omp.json",
+        "*файл конфигурации можно посмотреть в ветке \"main\"",
+        "oh-my-posh --init --shell pwsh --config .\\takuya.omp.json | Invoke-Expression",
+        "После проверки конфигурации, добавить в конфиг auto подгрузку конфигурации:"
+      ]
+    },
+    "11": {
+      "title": "Install NodeJS and check the verions bubble",
+      "links": ["https://nodejs.org/en/", "https://github.com/nvm-sh/nvm"],
+      "description": [
+        "scoop install nvm",
+        "nvm version",
+        "nvm install 16.13.2",
+        "nvm use 16.13.2",
+        "node -v"
+      ]
+    },
+    "12": {
+      "title": "Install plugins: Terminal Icons, z",
+      "links": [],
+      "description": [
+        "cd $env && cd .config/powershell",
+        "Install-Module -Name Terminal-Icons -Repository PSGallery -Force",
+        "Import-Module Terminal-Icons",
+        "Install-Module -Name z -Force"
+      ]
+    }
+  }
+}
